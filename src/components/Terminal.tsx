@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 const commands: { [key: string]: string } = {
     help: "Available commands: help, whoami, secret, status, override, exit",
     whoami: `

@@ -110,15 +110,16 @@ export default function PortfolioPage() {
   - What happens when we build systems we no longer fully understand?  <br/>
   - Are we moving toward a future where AI enhances humanity, or replaces it?  <br/>
   - What does it even mean to be human in a world increasingly shaped by machines?  <br/>
+  - If we create superintelligent AI, are we its gods... or its pets?  <br/>
+  - Can AI make me a pizza while contemplating Nietzschean existential dread?  <br/>
   - And last but not least, why don't we have rivers made of chocolate and separate taps for ice cream? Hello?
 </p>
 
 <p className="mt-2 text-green-300">
-  I don’t have all the answers, and maybe that’s the point.  
-  But I do know that understanding the fundamental principles behind stuff, whether it's physics, intelligence, or existence itself,
-  is the key to building a better future. And that’s what I plan to keep doing. Thanks for coming to my TED talk :p
-</p>
-
+I don’t have all the answers. And maybe that’s the point.  
+  But I do know that reverse-engineering reality is the closest thing we have to understanding it.  
+  So I’ll keep experimenting, breaking things, and questioning everything.   
+  Thanks for coming to my **TED Talk**.  </p>
 <hr className="border-green-500 my-4" />
 
         
@@ -127,7 +128,7 @@ export default function PortfolioPage() {
           <strong>🤔 What You’ll Find Here:</strong>  
           <ul className="mt-1 list-none">
             <li>✔ Experimental builds solving real-world AI issues, game dev experiments, and physics madness</li>
-            <li>✔ A mix of serious engineering, reckless creativity, and ofc few cursed ideas</li>
+            <li>✔ A mix of serious engineering, reckless creativity, and a few *questionable* life decisions</li>
             <li>✔ Just a girl on a mission to reverse-engineer reality, who may or may not have accidentally uploaded herself into the AI Matrix</li>
           </ul>
         </p>
@@ -136,7 +137,7 @@ export default function PortfolioPage() {
           <strong>🚫 What You Won’t Find Here:</strong>  
           <ul className="mt-1 list-none">
             <li>❌ Corporate job projects. Because data privacy, NDAs, and common sense exist.</li>
-            <li>❌ A boring, bullet-pointed CV. This isn’t LinkedIn and I can't really list every SQL query, pipeline and AZ functions I've ever written</li>
+            <li>❌ A boring, bullet-pointed CV. This isn’t LinkedIn and I’m not listing every SQL query I’ve ever written.</li>
             <li>❌ Overly polished nonsense. Expect things to be raw, hands-on, and built with love ❤️ (and occasional chaos)</li>
           </ul>
         </p>

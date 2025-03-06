@@ -35,7 +35,7 @@ const projects = [
 const uniqueTags = [...new Set(projects.flatMap((project) => project.tags))];
 
 export default function PortfolioPage() {
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prevTags) =>

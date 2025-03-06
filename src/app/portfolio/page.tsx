@@ -29,8 +29,6 @@ const projects = [
     location: "Personal Project",
     description: "A cat flying through chaos.",
     tags: ["Game Dev", "Pixel Art", "Physics-Based Mechanics", "Creative Coding"],
-    image: "/images/flappy-cat.gif",
-    links: [{ text: "Play Now", url: "#" }]
   },
 ];
 

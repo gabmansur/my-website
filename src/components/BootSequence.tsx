@@ -33,7 +33,7 @@ export default function BootSequence({ onComplete }: { onComplete: () => void })
     } else {
       setTimeout(() => onComplete(), 1000); // Small delay before completing
     }
-  }, [currentLine]);
+  }, [currentLine, onComplete]);
 
   return (
     <pre className="text-green-400 text-sm font-mono whitespace-pre-line leading-snug">

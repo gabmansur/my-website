@@ -16,7 +16,7 @@ interface GameSettings {
 
 export default function FlappyTom() {
   const gameRef = useRef<HTMLDivElement>(null);
-  const [game, setGame] = useState<any>(null);
+  const [game, setGame] = useState<PhaserLib.Game | null>(null); // Typed as Phaser.Game | null
   const [isPhaserLoaded, setIsPhaserLoaded] = useState(false);
   const [settings, setSettings] = useState<GameSettings>({
     gravity: 3,
@@ -33,7 +33,7 @@ export default function FlappyTom() {
     }
     console.log("Phaser loaded successfully");
     setIsPhaserLoaded(true);
-  }, [PhaserLib]);
+  }, []); // Removed PhaserLib from dependencies
 
   // Initialize game only when Phaser is loaded
   useEffect(() => {
@@ -137,7 +137,7 @@ export default function FlappyTom() {
     return () => {
       newGame.destroy(true);
     };
-  }, [isPhaserLoaded, game, settings.gravity]);
+  }, [isPhaserLoaded, game, settings.gravity]); // Only gravity as a dependency for now
 
   const handleSettingsChange = (newSettings: GameSettings) => {
     setSettings(newSettings);

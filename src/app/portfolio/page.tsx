@@ -3,18 +3,16 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Define the TypeScript types
 interface Project {
   title: string;
   year: string;
   location: string;
   description: string;
   tags: string[];
-  image: string; // Ensures image is always defined
+  image: string;
   links?: { text: string; url: string }[];
 }
 
-// Define the projects array with proper types
 const projects: Project[] = [
   {
     title: "🖥️ This very website",
@@ -33,20 +31,20 @@ const projects: Project[] = [
     description:
       "A tool that reveals how AI models make decisions, highlights token importance, reasoning, and influences behind AI-generated text.",
     tags: ["AI Explainability", "Machine Learning", "NLP", "OpenAI"],
-    image: "/images/glassbox-ai.png",
+    image: "/images/space.gif",
     links: [{ text: "GitHub Repo", url: "https://github.com/gabmansur/glassbox-ai" }],
   },
   {
-    title: "🎮 Flappy Cat – Arcade Game Dev",
+    title: "🎮 Flappy Tom – Arcade Game Dev",
     year: "2025",
     location: "Personal Project",
-    description: "A cat flying through chaos.",
+    description: "A cat flying through chaos with adjustable physics.",
     tags: ["Game Dev", "Pixel Art", "Physics-Based Mechanics", "Creative Coding"],
-    image: "/images/default.png", // Provide a default image
+    image: "/images/default.png",
+    links: [{ text: "Play now", url: "/flappytom" }],
   },
 ];
 
-// Get unique tags for filtering
 const uniqueTags = [...new Set(projects.flatMap((project) => project.tags))];
 
 export default function PortfolioPage() {
@@ -68,43 +66,54 @@ export default function PortfolioPage() {
         █ PROJECT ARCHIVES █
       </h1>
 
-      {/* KEYWORDS */}
       <div className="mb-6 flex flex-wrap justify-center gap-2">
         {uniqueTags.map((tag) => (
           <button
             key={tag}
             className={`px-3 py-1 border rounded ${
-              selectedTags.includes(tag) ? "bg-green-500 text-black" : "border-green-500 text-green-400"
+              selectedTags.includes(tag) ? "bg-green-500 text-black" : "border-green-400 text-green-400"
             }`}
             onClick={() => toggleTag(tag)}
+            aria-label={`Filter by ${tag}`}
           >
             {tag}
           </button>
         ))}
       </div>
 
-      {/* PROJECTS LISTING */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project, index) => (
-          <div key={index} className="border border-green-500 p-4">
-            <Image
-              src={project.image || "/images/default.png"}
-              alt={project.title}
-              width={400}
-              height={200}
-              className="mb-4 border border-green-500"
-            />
+          <div key={index} className="border border-green-500 p-4 animate-fade-in">
+            {project.image ? (
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={400}
+                height={200}
+                className="mb-4 border border-green-500"
+                loading="lazy"
+              />
+            ) : (
+              <div className="mb-4 h-48 bg-gray-700 animate-pulse" />
+            )}
             <h2 className="text-xl text-green-300">{project.title}</h2>
             <p className="text-green-400">📌 {project.year} | {project.location}</p>
             <p className="mt-2">{project.description}</p>
             <div className="mt-2 flex flex-wrap">
               {project.tags.map((tag, idx) => (
-                <span key={idx} className="bg-green-800 text-white px-2 py-1 text-xs mr-2 rounded">{tag}</span>
+                <span key={idx} className="bg-green-800 text-white px-2 py-1 text-xs mr-2 rounded">
+                  {tag}
+                </span>
               ))}
             </div>
             <div className="mt-2">
               {project.links?.map((link, idx) => (
-                <a key={idx} href={link.url} className="text-green-500 hover:text-green-300 mr-4">
+                <a
+                  key={idx}
+                  href={link.url}
+                  className="text-green-500 hover:text-green-300 mr-4"
+                  aria-label={link.text}
+                >
                   {link.text}
                 </a>
               ))}

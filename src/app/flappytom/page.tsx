@@ -1,4 +1,4 @@
-import FlappyTom from "./game/FlappyTom";
+import FlappyTom from "./FlappyTom";
 
 export default function Page() {
   return <FlappyTom />;

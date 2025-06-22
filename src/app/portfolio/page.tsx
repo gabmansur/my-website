@@ -25,11 +25,21 @@ const projects: Project[] = [
     links: [{ text: "Read more", url: "/projects/website" }],
   },
   {
+    title: "🦄⚡ Latency Arbitrage Simulator ",
+    year: "2025",
+    location: "Personal Project",
+    description:
+      "A playful, interactive dashboard that simulates high-frequency trading arbitrage. Tune latency, reaction speed, and win rate like a true crypto degen—then watch your bot try to outsmart the market, get rich, or get rekt. Inspired by my adventures in the memecoin jungle.",
+    tags: ["Simulation", "Fintech", "Trading Systems", "Crypto", "Data Visualization", "Python", "Streamlit"],
+    image: "/images/dad.gif",
+    links: [{ text: "Streamlit Dashboard", url: "https://latency-arbitrage-simulator.streamlit.app/" },{text: "GitHub Repo", url: "https://github.com/gabmansur/latency-arbitrage-simulator"}],
+  },
+  {
     title: "🕵️‍♂️ GlassBox AI",
     year: "2025",
     location: "Personal Project",
     description:
-      "A tool that reveals how AI models make decisions, highlights token importance, reasoning, and influences behind AI-generated text.",
+      "WIP - A tool that reveals how AI models make decisions, highlights token importance, reasoning, and influences behind AI-generated text.",
     tags: ["AI Explainability", "Machine Learning", "NLP", "OpenAI"],
     image: "/images/space.gif",
     links: [{ text: "GitHub Repo", url: "https://github.com/gabmansur/glassbox-ai" }],
@@ -40,7 +50,7 @@ const projects: Project[] = [
     location: "Personal Project",
     description: "A cat flying through chaos with adjustable physics.",
     tags: ["Game Dev", "Pixel Art", "Physics-Based Mechanics", "Creative Coding"],
-    image: "/images/default.png",
+    image: "/images/flappytom.png",
     links: [{ text: "Play now", url: "/flappytom" }],
   },
 ];

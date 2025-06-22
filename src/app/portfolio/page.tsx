@@ -43,16 +43,7 @@ const projects: Project[] = [
     tags: ["AI Explainability", "Machine Learning", "NLP", "OpenAI"],
     image: "/images/space.gif",
     links: [{ text: "GitHub Repo", url: "https://github.com/gabmansur/glassbox-ai" }],
-  },
-  {
-    title: "🎮 Flappy Tom – Arcade Game Dev",
-    year: "2025",
-    location: "Personal Project",
-    description: "A cat flying through chaos with adjustable physics.",
-    tags: ["Game Dev", "Pixel Art", "Physics-Based Mechanics", "Creative Coding"],
-    image: "/images/flappytom.png",
-    links: [{ text: "Play now", url: "/flappytom" }],
-  },
+  }
 ];
 
 const uniqueTags = [...new Set(projects.flatMap((project) => project.tags))];

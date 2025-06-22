@@ -31,7 +31,7 @@ const projects: Project[] = [
     description:
       "A playful, interactive dashboard that simulates high-frequency trading arbitrage. Tune latency, reaction speed, and win rate like a true crypto degen—then watch your bot try to outsmart the market, get rich, or get rekt. Inspired by my adventures in the memecoin jungle.",
     tags: ["Simulation", "Fintech", "Trading Systems", "Crypto", "Data Visualization", "Python", "Streamlit"],
-    image: "/images/dad.gif",
+    image: "/images/dad.jpeg",
     links: [{ text: "Streamlit Dashboard", url: "https://latency-arbitrage-simulator.streamlit.app/" },{text: "GitHub Repo", url: "https://github.com/gabmansur/latency-arbitrage-simulator"}],
   },
   {
